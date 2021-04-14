@@ -19,7 +19,7 @@ jobs:
         run: python hello.py
 
   create-artifact:
-    need: run-python-file
+    needs: run-python-file
     runs-on: ubuntu-latest
     steps:
       - name: Upload the artefact
