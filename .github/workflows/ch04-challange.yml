@@ -22,6 +22,9 @@ jobs:
     needs: run-python-file
     runs-on: ubuntu-latest
     steps:
+      - name: Check out the code
+        uses: actions/checkout@v2
+
       - name: Upload the artefact
         uses: actions/upload-artifact@v2
         with:
