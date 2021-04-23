@@ -11,14 +11,14 @@ APP = Flask(__name__)
 MASCOTS = json.load(open('data.json', 'r'))
 
 
-# @APP.route('/', methods=['GET'])
-# def get_mascots():
-#     """
-#     Function: get_mascots
-#     Input: none
-#     Returns: A list of mascot objects
-#     """
-#     return jsonify(MASCOTS)
+@APP.route('/', methods=['GET'])
+def get_mascots():
+    """
+    Function: get_mascots
+    Input: none
+    Returns: A list of mascot objects
+    """
+    return jsonify(MASCOTS)
 
 
 @APP.route('/<guid>', methods=['GET'])
